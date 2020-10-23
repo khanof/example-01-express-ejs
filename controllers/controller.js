@@ -92,7 +92,7 @@ module.exports = {
 
                     req.session.cookie.maxAge = 1232592000000;
                     //Amir: in my project I use JWT for such scenarios, to use localStorage instead of cookie.
-                    //beside some other information..
+                    // except the token I can preserve some useful information ..
                 } else {
                     req.session.cookie.expires = false;
                     // Do not remember the user
@@ -156,8 +156,8 @@ module.exports = {
                         if (rememberMe) {
                             // Allow the user to be remembered by the server. When they close the browser and end their session they should not have to login again once they attempt to go to the homepage
                             req.session.cookie.maxAge = 1232592000000;
-                            //Amir: in my project I use JWT for such scenarios, to use localStorage instead of cookie.
-                            //beside some other information..
+                            //Amir: in my projects I use JWT for such scenarios, to use localStorage instead of cookie.
+                            // except the token I can preserve some useful information ..
                         } else {
                             req.session.cookie.expires = false;
                             // Do not remember the user
